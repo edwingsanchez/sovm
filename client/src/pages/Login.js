@@ -12,7 +12,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/users/login", { email, password });
+      const res = await axios.post("https://sovm.onrender.com/api/users/login", { email, password });
       setUser(res.data);
       navigate("/");
     } catch (err) {

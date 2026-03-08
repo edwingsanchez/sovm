@@ -18,7 +18,7 @@ function Checkout() {
         products: cart.map(item => ({ product: item.product._id, quantity: item.quantity })),
         totalPrice: total
       };
-      await axios.post("http://localhost:5000/api/orders", orderData, {
+      await axios.post("https://sovm.onrender.com/api/orders", orderData, {
         headers: { Authorization: `Bearer ${user.token}` }
       });
       setCart([]);

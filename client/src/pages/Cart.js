@@ -28,7 +28,7 @@ function Cart() {
       }));
 
       await axios.post(
-        "http://localhost:5000/api/orders",
+        "https://sovm.onrender.com/api/orders",
         { products: orderProducts, total },
         { headers: { Authorization: `Bearer ${user.token}` } }
       );

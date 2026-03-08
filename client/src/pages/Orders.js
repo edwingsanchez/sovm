@@ -10,7 +10,7 @@ function Orders() {
     const fetchOrders = async () => {
       if (!user) return;
       try {
-        const res = await axios.get("http://localhost:5000/api/orders", {
+        const res = await axios.get("https://sovm.onrender.com/api/orders", {
           headers: { Authorization: `Bearer ${user.token}` },
         });
         setOrders(res.data);
